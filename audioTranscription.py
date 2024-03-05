@@ -45,6 +45,14 @@ def get_info():
       transcription_text = transcription_text.text
       list_two.append(transcription_text)
 
+  for i in range(min(len(list_one), len(list_two))):
+  transcription_info = {
+    "Transcription Time": list_one[i],
+    "Transcription Text": list_two[i]
+  }
+
+  master_list.append(transcription_info)
+
   df = pd.DataFrame(master_list)
   df.to_csv("trans_info2.txt", index=False)
   print("File Created.")
