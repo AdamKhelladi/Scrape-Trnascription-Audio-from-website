@@ -39,7 +39,11 @@ def get_info():
     transcription_time = transcription_time.text
     list_one.append(transcription_time)
 
-
+  transcription_texts = table.find_all("p", {"class": "MuiTypography-root MuiTypography-body1 css-dezo25"})
+  for transcription_text in transcription_texts: 
+    if transcription_text.text != "...":
+      transcription_text = transcription_text.text
+      list_two.append(transcription_text)
 
   df = pd.DataFrame(master_list)
   df.to_csv("trans_info2.txt", index=False)
