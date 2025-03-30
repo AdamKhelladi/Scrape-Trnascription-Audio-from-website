@@ -22,6 +22,7 @@ def get_info():
 
   list_one = []
   list_two = []
+  
   master_list = []
 
   options = webdriver.ChromeOptions()
