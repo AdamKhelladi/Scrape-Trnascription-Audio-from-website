@@ -36,6 +36,7 @@ def get_info():
 
   soup = bs(html_code, "html.parser")
   time.sleep(5)
+  
   table = soup.find("table")
 
   transcription_times = table.find_all("p", {"class": "MuiTypography-root MuiTypography-body1 MuiTypography-alignCenter css-1afvpvs"})
