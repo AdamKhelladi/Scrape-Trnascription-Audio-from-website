@@ -60,6 +60,7 @@ def get_info():
 
   df = pd.DataFrame(master_list)
   df.to_csv("trans_info2.txt", index=False)
+  
   print("File Created.")
   driver.quit()
 
